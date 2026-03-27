@@ -39,15 +39,11 @@ export default function SignupPage() {
         setForm({ ...form, [field]: value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+   const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (form.password !== form.confirmPassword) {
-            alert("Passwords do not match!");
-            return;
-        }
         console.log("Signup Data:", form);
         // Add your registration/signup logic here
-          router.push("/login");
+          router.push("/dashboard");
     };
 
     return (
