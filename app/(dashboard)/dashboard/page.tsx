@@ -36,7 +36,7 @@ export default function DashboardPage() {
 
   const textMain = isDark ? "text-slate-100" : "text-slate-900";
   const textSub = isDark ? "text-slate-400" : "text-slate-500";
-
+  const [active, setActive] = useState('1M');
   // If not mounted, return a skeleton or empty div to avoid flicker
   if (!mounted) return <div className="min-h-screen bg-[#121418]" />;
 
@@ -100,10 +100,25 @@ export default function DashboardPage() {
           <div className={`${bentoStyle} col-span-12 lg:col-span-8`}>
             <div className="flex justify-between items-center mb-8">
               <h3 className={`text-lg font-bold ${textMain}`}>Cashflow Trend</h3>
-              <div className="flex bg-slate-800/50 p-1 rounded-lg">
-                {['1W', '1M', '3M'].map(t => (
-                  <button key={t} className={`px-4 py-1.5 text-[11px] font-bold rounded-md ${t === '1M' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}>{t}</button>
-                ))}
+              <div className="flex p-1 rounded-lg bg-card border border-border">
+                {['1W', '1M', '3M'].map((t) => {
+                  const isActive = t === active;
+
+                  return (
+                    <button
+                      key={t}
+                      onClick={() => setActive(t)}
+                      className={`px-4 py-1.5 text-[11px] hover:scale-105 active:scale-95 font-bold rounded-md transition-all duration-300
+          ${isActive
+                          ? 'bg-primary  shadow-md'
+                          : 'text-muted-foreground hover:text-foreground'
+                        }
+        `}
+                    >
+                      {t}
+                    </button>
+                  );
+                })}
               </div>
             </div>
             <div className="h-75 w-full">

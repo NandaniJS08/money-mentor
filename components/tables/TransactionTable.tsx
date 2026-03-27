@@ -11,7 +11,7 @@ export default function TransactionTable() {
   return (
     <div className="bg-transparent w-full overflow-hidden">
       {/* Title: Pure White in Dark Mode */}
-      <h2 className="text-xl font-bold mb-6 text-slate-600 dark:text-white px-1">
+      <h2 className="text-xl font-bold mb-6 px-1">
         Transaction History
       </h2>
 
@@ -19,7 +19,7 @@ export default function TransactionTable() {
         <table className="w-full text-left border-collapse">
           <thead>
             {/* Header: Silver/Light Grey in Dark Mode for high contrast */}
-            <tr className="text-slate-500 dark:text-slate-300 text-xs uppercase tracking-widest border-b border-slate-200 dark:border-white/20">
+            <tr className=" text-xs uppercase tracking-widest border-b border-slate-200 dark:border-white/20">
               <th className="pb-4 font-bold px-2">Name</th>
               <th className="pb-4 font-bold px-2">Amount</th>
               <th className="pb-4 font-bold px-2">Status</th>
@@ -33,12 +33,12 @@ export default function TransactionTable() {
                 className="group transition-colors hover:bg-white/5"
               >
                 {/* Transaction Name: Bright White in Dark Mode */}
-                <td className="py-4 px-2 text-sm font-medium text-slate-400 dark:text-slate-100">
+                <td className="py-4 px-2 text-sm font-medium">
                   {tx.name}
                 </td>
 
                 {/* Amount: Pure White in Dark Mode */}
-                <td className="py-4 px-2 text-sm font-bold text-slate-500 dark:text-white">
+                <td className="py-4 px-2 text-sm font-bold">
                   ₹{tx.amount.toLocaleString("en-IN")}
                 </td>
 

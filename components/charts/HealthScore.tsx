@@ -58,10 +58,10 @@ export default function HealthScore({ score }: Props) {
 
       {/* Score Text: Centered & Theme-Aware */}
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <span className="text-3xl font-black tracking-tighter text-slate-400 dark:text-white transition-colors">
+        <span className="text-3xl font-black tracking-tighter  transition-colors">
           {score}
         </span>
-        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
+        <span className="text-[10px] font-bold uppercase tracking-[0.2em]">
           Score
         </span>
       </div>

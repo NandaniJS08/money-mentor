@@ -13,11 +13,11 @@ export default function GoalCard({ title, current, target }: Props) {
       <div className="flex justify-between items-end mb-2">
         <div>
           {/* Title: Pure white in dark mode */}
-          <h3 className="text-sm font-bold text-slate-500 dark:text-white transition-colors">
+          <h3 className="text-sm font-bold transition-colors">
             {title}
           </h3>
           {/* Amounts: Silver/Gray in dark mode for hierarchy */}
-          <p className="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5">
+          <p className="text-[11px] font-medium mt-0.5">
             ₹{current.toLocaleString()} <span className="opacity-40">/</span> ₹{target.toLocaleString()}
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function GoalCard({ title, current, target }: Props) {
       </div>
 
       {/* Subtext: High visibility gray */}
-      <p className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 mt-2 uppercase tracking-wider">
+      <p className="text-[10px] font-semibold  mt-2 uppercase tracking-wider">
         {percentage >= 100 ? "Goal Reached! 🎉" : "Keep going"}
       </p>
     </div>

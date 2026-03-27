@@ -2,21 +2,27 @@
 
 /* 1. DEFINE DYNAMIC THEME VARIABLES */
 :root {
-  /* Light Mode - Soft Slate */
+  /* LIGHT MODE (strong contrast) */
   --background: #f8fafc;
   --foreground: #0f172a;
+
   --card: #ffffff;
   --border: #e2e8f0;
+
+  --muted-foreground: #64748b; /* 🔥 ADD THIS */
+  --primary: #6366f1;
 }
 
-/* 2. DARK MODE OVERRIDES */
-/* next-themes will add the .dark class to the <html> tag */
 .dark {
-  /* Graphite/Obsidian Theme */
-  --background: #08080a; /* Your Deep Charcoal */
+  /* DARK MODE */
+  --background: #08080a;
   --foreground: #f1f5f9;
-  --card: #1c1f26;       /* Your Bento Card Grey */
-  --border: rgba(255, 255, 255, 0.05);
+
+  --card: #1c1f26;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --muted-foreground: #9ca3af;
+  --primary: #818cf8;
 }
 
 /* 3. APPLY TO BODY */
@@ -46,7 +52,5 @@ body {
     background: #3f4246;
   }
 
-  .dark h1, .dark h2, .dark h3, .dark h4, .dark p, .dark span {
-    color: #f1f5f9; 
-  }
+  
 }
