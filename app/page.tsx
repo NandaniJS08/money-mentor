@@ -48,7 +48,7 @@ export default function LandingPage() {
         </div>
         <div className="hidden md:flex items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
          <Link href="/login" className="px-6 py-2 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all">Log In</Link>
-           <Link href="/login" className="px-6 py-2 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all">Sign In</Link>
+           <Link href="/signup" className="px-6 py-2 border border-white/10 rounded-full hover:bg-white hover:text-black transition-all">Sign In</Link>
         </div>
       </nav>
 
