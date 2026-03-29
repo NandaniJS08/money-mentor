@@ -43,7 +43,7 @@ export default function SignupPage() {
         e.preventDefault();
         console.log("Signup Data:", form);
         // Add your registration/signup logic here
-          router.push("/dashboard");
+            router.push("/onboarding");
     };
 
     return (
